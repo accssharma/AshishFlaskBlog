@@ -7,6 +7,9 @@ Original Video tutorial:
 - [Youtube](https://www.youtube.com/watch?v=MwZwr5Tvyxo&list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH)
 - [Github](https://github.com/CoreyMSchafer/code_snippets/tree/master/Python/Flask_Blog)
 
+### Environment Setup
+- `$ conda create -n new environment --file requirements.txt`
+
 ### Install SCSS (full instructions [here](https://sass-lang.com/install))
 
 - `npm install -g sass`
