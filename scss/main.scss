@@ -1,0 +1,121 @@
+//
+// Variables (colors, background-colors, etc.)
+//
+$blue:    #00798b !default;
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #e83e8c !default;
+$red:     #dc3545 !default;
+$orange:  #fd7e14 !default;
+$yellow:  #ffc107 !default;
+$green:   #77c34e !default;
+$teal:    #20c997 !default;
+$cyan:    #17a2b8 !default;
+$gray:    #333333 !default;
+
+$font-stack:    Helvetica, sans-serif;
+$body-color: #333;
+$body-bg-color: #fafafa;
+$primary-color: $blue;
+$primary-bg-color: $green;
+
+$white-color: #ffffff;
+
+$site-header-nav-link-color: $gray;
+$site-header-nav-link-hover-color: $white-color;
+
+$border-bottom: #e3e3e3;
+
+$content-section-bg: $white-color;
+$content-section-border-color: #dddddd;
+
+$article-title-color: $primary-color;
+$article-title-hover-color: #428bca;
+
+$article-metadata-hover-color: $gray;
+
+//
+// Css Content
+//
+
+body {
+  font: 100% $font-stack;
+  background: $body-bg-color;
+  color: $body-color;
+  margin-top: 5rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $primary-color;
+}
+
+.bg-steel {
+  background-color: $primary-bg-color;
+}
+
+.site-header .navbar-nav .nav-link {
+  color: $site-header-nav-link-color;
+}
+
+.site-header .navbar-nav .nav-link:hover {
+  color: $site-header-nav-link-hover-color;
+}
+
+.site-header .navbar-nav .nav-link.active {
+  font-weight: 500;
+}
+
+.content-section {
+  background: $content-section-bg;
+  padding: 10px 20px;
+  border: 1px solid $content-section-border-color;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+
+.article-title {
+  color: $article-title-color;
+}
+
+a.article-title:hover {
+  color: $article-title-hover-color;
+  text-decoration: none;
+}
+
+.article-content {
+  white-space: pre-line;
+}
+
+.article-img {
+  height: 65px;
+  width: 65px;
+  margin-right: 16px;
+}
+
+.article-metadata {
+  padding-bottom: 1px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid $border-bottom
+}
+
+.article-metadata a:hover {
+  color: $article-metadata-hover-color;
+  text-decoration: none;
+}
+
+.article-svg {
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+}
+
+.account-img {
+  height: 125px;
+  width: 125px;
+  margin-right: 20px;
+  margin-bottom: 16px;
+}
+
+.account-heading {
+  font-size: 2.5rem;
+}
