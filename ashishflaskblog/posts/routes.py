@@ -4,6 +4,7 @@ from flask_login import current_user, login_required
 from ashishflaskblog import db
 from ashishflaskblog.models import Post
 from ashishflaskblog.posts.forms import PostForm
+# import markdown
 
 posts = Blueprint('posts', __name__)
 
@@ -13,8 +14,10 @@ posts = Blueprint('posts', __name__)
 def new_post():
     form = PostForm()
     if form.validate_on_submit():
+        # html_content = markdown.markdown(form.content.data)
+        html_content = form.content.data
         post = Post(title=form.title.data,
-                    content=form.content.data, author=current_user)
+                    content=html_content, author=current_user)
         db.session.add(post)
         db.session.commit()
         flash('Your post has been created!', 'success')
@@ -39,7 +42,9 @@ def update_post(post_id):
     form = PostForm()
     if form.validate_on_submit():
         post.title = form.title.data
-        post.content = form.content.data
+        # html_content = markdown.markdown(form.content.data)
+        html_content = form.content.data
+        post.content = html_content
         db.session.commit()
         flash('Your post has been updated!', 'success')
         return redirect(url_for('posts.post', post_id=post.id))
